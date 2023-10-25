@@ -6,7 +6,7 @@
     <title>
       Monstro Studios
     </title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
        body {
         font-family: Arial;
@@ -123,10 +123,19 @@ display: block;
 
 }
 
+
+
+
 .section1 {
   width: 100vw;
-  text-align: center;
   height: 800px;
+   background-color: lightblue;
+   height: auto;
+}
+
+.section1-heading {
+  text-align: center;
+  
    background-color: lightblue;
     display: flex;
     flex-direction: column;
@@ -134,13 +143,13 @@ display: block;
 }
 
 
-
-
-
-
-
-
-
+.header{
+  font-size: 80px;
+   font-weight: bold; 
+   padding: 0;
+    margin-top: 25px; 
+    margin-bottom: 0px;
+}
 
 
 
@@ -149,6 +158,7 @@ display: block;
   width: 100vw;
   height: 800px;
    background-color: rgb(187, 234, 66);
+   height: auto;
 }
 
 .section2-heading {
@@ -166,8 +176,12 @@ display: block;
 
 
 
-.team {
 
+
+
+.team {
+  width: 100%;
+  height: 80vh;
   text-align: center;
   background-color: rgb(187, 234, 66);
    display: flex;
@@ -184,10 +198,14 @@ display: block;
 
 
 
-.team-members-1, .team-members-2, .team-members-3 {
+.team-members-1, .team-members-2, .team-members-3,
+ .game-1, .game-2, .game-3,
+ .helper-1, .helper-2, .helper-3
+  {
+    margin-bottom: 10%;
   margin-left: 100px;
-  height: 400px;
-  width: 350px;
+  height: 50vh;
+  width: 20%;
 
   transition: height 200ms ease;
   text-align: left;
@@ -216,31 +234,45 @@ display: block;
   
 }
 
-.team-members-1:hover, .team-members-2:hover, .team-members-3:hover {
+.team-members-1:hover, .team-members-2:hover, .team-members-3:hover,
+.game-1:hover, .game-2:hover, .game-3:hover,
+.helper-1:hover, .helper-2:hover, .helper-3:hover {
+  margin-bottom: 10%;
   margin-left: 100px;
-  height: 500px;
-  width: 350px;
+  height: 65vh;
+  width: 20%;
+
+  transition: height 200ms ease;
+  text-align: left;
 
   
  
 }
 
-.team-members-img-1, .team-members-img-2, .team-members-img-3 {
-  height: 300px;
- width: 350px;
+.team-members-img-1, .team-members-img-2, .team-members-img-3,
+.game-img-1, .game-img-2, .game-img-3,
+.helper-img-1, .helper-img-2, .helper-img-3 {
+  height: auto;
+ width: 100%;
 }
 
-.team-members-role-1, .team-members-role-2, .team-members-role-3 {
+.team-members-role-1, .team-members-role-2, .team-members-role-3,
+.game-role-1, .game-role-2, .game-role-3,
+.helper-role-1, .helper-role-2, .helper-role-3{
   font-weight: bold;
   margin-left: 20px;
 }
 
-.team-members-name-1, .team-members-name-2, .team-members-name-3 {
+.team-members-name-1, .team-members-name-2, .team-members-name-3,
+ .game-name-1, .game-name-2, .game-name-3, 
+.helper-name-1, .helper-name-2, .helper-name-3 {
   
   margin-left: 20px;
 }
 
-.team-members-extra-info-1, .team-members-extra-info-2, .team-members-extra-info-3 {
+.team-members-extra-info-1, .team-members-extra-info-2, .team-members-extra-info-3,
+.game-extra-info-1, .game-extra-info-2, .game-extra-info-3,
+.helper-extra-info-1, .helper-extra-info-2, .helper-extra-info-3{
   margin-top: 50px;
             margin-left: 20px;
             color: transparent;
@@ -248,37 +280,26 @@ display: block;
             
         }
 
-        .team-members-1:hover .team-members-extra-info-1, .team-members-2:hover .team-members-extra-info-2, .team-members-3:hover .team-members-extra-info-3 {
+        .team-members-1:hover .team-members-extra-info-1, 
+        .team-members-2:hover .team-members-extra-info-2,
+       .team-members-3:hover .team-members-extra-info-3,
+       .game-1:hover .game-extra-info-1,
+       .game-2:hover .game-extra-info-2,
+       .game-3:hover .game-extra-info-3,
+       .helper-1:hover .helper-extra-info-1,
+       .helper-2:hover .helper-extra-info-2,
+       .helper-3:hover .helper-extra-info-3 {
 
   animation: textAppear 400ms forwards;
  
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .section3 {
   width: 100vw;
   height: 800px;
    background-color: rgb(66, 175, 234);
+   height: auto;
 }
 
 .section3-heading {
@@ -291,97 +312,44 @@ display: block;
 }
 
 
-
-
-
-
-
 .games {
+  width: 100%;
   text-align: center;
   margin: 0px;
   padding: 0px;
    display: flex;
    flex-direction: row;
-   
+   height: 80vh;
 }
 
 
 .game-1 {
-  margin-left: 100px;
-  height: 400px;
-  width: 350px;
+
   background-color: rgb(230, 93, 93);
-  transition: height 200ms ease;
-  text-align: left;
-  
+
+
 }
 
 .game-2 {
-  margin-left: 100px;
-  height: 400px;
-  width: 350px;
+
   background-color: rgb(251, 255, 230);
-  transition: height 200ms ease;
-  text-align: left;
+
   
 }
 
 .game-3 {
-  margin-left: 100px;
-  height: 400px;
-  width: 350px;
+
   background-color: rgb(207, 122, 246);
-  transition: height 200ms ease;
-  text-align: left;
+
   
 }
-
-.game-1:hover, .game-2:hover, .game-3:hover {
-  margin-left: 100px;
-  height: 500px;
-  width: 350px;
-  
- 
-}
-
-.game-img-1, .game-img-2, .game-img-3 {
- height: 300px;
- width: 350px;
-}
-
-.game-role-1, .game-role-2, .game-role-3 {
-  font-weight: bold;
-  margin-left: 20px;
-}
-
-.game-name-1, .game-name-2, .game-name-3 {
-  
-  margin-left: 20px;
-}
-
-.game-extra-info-1, .game-extra-info-2, .game-extra-info-3 {
- margin-top: 50px;
- margin-left: 20px;
- color: transparent;
-            
-            
-}
-
-.game-1:hover .game-extra-info-1, .game-2:hover .game-extra-info-2, .game-3:hover .game-extra-info-3 {
-
-  animation: textAppear 400ms forwards;
- 
-}
-
-
-
-
 
 
 .section4 {
   width: 100vw;
   height: 800px;
    background-color: rgb(181, 66, 234);
+   height: auto;
 }
 
 .section4-heading {
@@ -394,84 +362,35 @@ display: block;
 }
 
 .helpers {
+  width: 100%;
   text-align: center;
   margin: 0px;
   padding: 0px;
    display: flex;
    flex-direction: row;
-   
+   height: 80vh;
 }
 
 
 .helper-1 {
-  margin-left: 100px;
-  height: 400px;
-  width: 350px;
+
   background-color: rgb(230, 93, 93);
-  transition: height 200ms ease;
-  text-align: left;
-  
+
 }
 
 .helper-2 {
-  margin-left: 100px;
-  height: 400px;
-  width: 350px;
+
   background-color: rgb(251, 255, 230);
-  transition: height 200ms ease;
-  text-align: left;
+
   
 }
 
 .helper-3 {
-  margin-left: 100px;
-  height: 400px;
-  width: 350px;
+
   background-color: rgb(207, 122, 246);
-  transition: height 200ms ease;
-  text-align: left;
+
   
 }
-
-.helper-1:hover, .helper-2:hover, .helper-3:hover {
-  margin-left: 100px;
-  height: 500px;
-  width: 350px;
-  
- 
-}
-
-.helper-img-1, .helper-img-2, .helper-img-3 {
- height: 300px;
- width: 350px;
-}
-
-.helper-role-1, .helper-role-2, .helper-role-3 {
-  font-weight: bold;
-  margin-left: 20px;
-}
-
-.helper-name-1, .helper-name-2, .helper-name-3 {
-  
-  margin-left: 20px;
-}
-
-.helper-extra-info-1, .helper-extra-info-2, .helper-extra-info-3 {
- margin-top: 50px;
- margin-left: 20px;
- color: transparent;
-            
-            
-}
-
-.helper-1:hover .helper-extra-info-1, .helper-2:hover .helper-extra-info-2, .helper-3:hover .helper-extra-info-3 {
-
-  animation: textAppear 400ms forwards;
- 
-}
-
-
-
 
 
 
@@ -492,23 +411,114 @@ display: block;
         }
 
         @media screen and (max-width: 768px) {
-        .section1 p {
-          font-size: 40px;
+
+        .section1 p,
+        .section1-heading p {
+          font-size: 30px;
         }
+        
+       
 
         .section2 p,
         .section2-heading p {
-          font-size: 40px;
+          font-size: 30px;
         }
 
         .section3 p,
         .section3-heading p {
-          font-size: 40px;
+          font-size: 30px;
         }
 
         .section4 p,
         .section4-heading p {
-          font-size: 40px;
+          font-size: 30px;
+        }
+
+        .team-members-1, .team-members-2, .team-members-3,
+ .game-1, .game-2, .game-3,
+ .helper-1, .helper-2, .helper-3
+  {
+    margin-bottom: 10%;
+  margin-left: 20%;
+  height: 70vh;
+  width: 60%;
+
+  transition: height 200ms ease;
+  text-align: left;
+  
+}
+
+        .team{
+          flex-direction: column;
+          height: auto;
+        }
+        .games{
+          flex-direction: column;
+          height: auto;
+        }
+
+        .helpers{
+          flex-direction: column;
+          height: auto;
+        }
+
+
+                .team-members-1:hover, .team-members-2:hover, .team-members-3:hover,
+        .game-1:hover, .game-2:hover, .game-3:hover,
+        .helper-1:hover, .helper-2:hover, .helper-3:hover {
+          margin-left: 20%;
+          height: 130vh;
+  
+  width: 60%;
+
+          
+        
+        }
+
+        .team-members-img-1, .team-members-img-2, .team-members-img-3,
+        .game-img-1, .game-img-2, .game-img-3,
+        .helper-img-1, .helper-img-2, .helper-img-3 {
+          height: 175px;
+          width: 100%;
+
+        }
+
+        .team-members-role-1, .team-members-role-2, .team-members-role-3,
+        .game-role-1, .game-role-2, .game-role-3,
+        .helper-role-1, .helper-role-2, .helper-role-3{
+          font-weight: bold;
+          margin-left: 15px;
+        }
+
+        .team-members-name-1, .team-members-name-2, .team-members-name-3,
+        .game-name-1, .game-name-2, .game-name-3, 
+        .helper-name-1, .helper-name-2, .helper-name-3 {
+          
+          margin-left: 15px;
+        }
+
+        .team-members-extra-info-1, .team-members-extra-info-2, .team-members-extra-info-3,
+        .game-extra-info-1, .game-extra-info-2, .game-extra-info-3,
+        .helper-extra-info-1, .helper-extra-info-2, .helper-extra-info-3{
+          margin-top: 30px;
+                    margin-left: 15px;
+                    color: transparent;
+                    
+                    
+                }
+
+                .team-members-1:hover .team-members-extra-info-1, 
+                .team-members-2:hover .team-members-extra-info-2,
+              .team-members-3:hover .team-members-extra-info-3,
+              .game-1:hover .game-extra-info-1,
+              .game-2:hover .game-extra-info-2,
+              .game-3:hover .game-extra-info-3,
+              .helper-1:hover .helper-extra-info-1,
+              .helper-2:hover .helper-extra-info-2,
+              .helper-3:hover .helper-extra-info-3 {
+
+          animation: textAppear 400ms forwards;
+        
         }
       }
    </style>
@@ -547,17 +557,22 @@ display: block;
 
 
       <div class="section1">
-      <p style="font-size: 90px; font-weight: bold; padding: 0; margin-top: 25px; margin-bottom: 0px;">
-        MONSTRO STUDIOS <br> LLC 
-      </p>
-      
-      <p style="font-size: 25px; padding: 0; margin-top: 15px;">
-        Developers of SilenceVR
-      </p>
-    </div>
 
 
 
+        <div class="section1-heading">
+          <p class="header">
+            MONSTRO STUDIOS LLC
+          </p>
+          
+          <p style="font-size: 25px; padding: 0; margin-top: 15px;">
+            Developers of SilenceVR
+          </p>
+        </div>
+        </div>
+
+   
+    
 
 
     <div class="section2">
@@ -565,7 +580,7 @@ display: block;
 
 
       <div class="section2-heading">
-        <p style="font-size: 90px; font-weight: bold; padding: 0; margin-top: 25px; margin-bottom: 0px;">
+        <p class="header">
           Meet The Team
         </p>
         
@@ -616,7 +631,7 @@ display: block;
 
 
       <div class="section3-heading">
-        <p style="font-size: 90px; font-weight: bold; padding: 0; margin-top: 25px; margin-bottom: 0px;">
+        <p class="header">
           Our Games
         </p>
         
@@ -666,7 +681,7 @@ display: block;
 
 
       <div class="section4-heading">
-        <p style="font-size: 90px; font-weight: bold; padding: 0; margin-top: 25px; margin-bottom: 0px;">
+        <p class="header">
           Helpers
         </p>
         
